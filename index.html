@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Expense Tracker Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <header class="header">
+        <div>
+            <h1>Expense Tracker</h1>
+            <p>Track your finances with clarity.</p>
+        </div>
+    </header>
+
+    <section class="cards">
+
+        <div class="card income-card">
+            <span>Income</span>
+            <h2 id="totalIncome">₹0</h2>
+        </div>
+
+        <div class="card expense-card">
+            <span>Expenses</span>
+            <h2 id="totalExpense">₹0</h2>
+        </div>
+
+        <div class="card balance-card">
+            <span>Balance</span>
+            <h2 id="balance">₹0</h2>
+        </div>
+
+    </section>
+
+    <section class="dashboard">
+
+        <div class="form-section">
+
+            <h3>Add Transaction</h3>
+
+            <form id="transactionForm">
+
+                <input
+                    type="text"
+                    id="description"
+                    placeholder="Description"
+                    required
+                >
+
+                <input
+                    type="number"
+                    id="amount"
+                    placeholder="Amount"
+                    required
+                >
+
+                <select id="type">
+                    <option value="income">Income</option>
+                    <option value="expense">Expense</option>
+                </select>
+
+                <select id="category">
+                    <option value="Salary">Salary</option>
+                    <option value="Food">Food</option>
+                    <option value="Shopping">Shopping</option>
+                    <option value="Travel">Travel</option>
+                    <option value="Bills">Bills</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <button type="submit">
+                    Save Transaction
+                </button>
+
+            </form>
+
+        </div>
+
+        <div class="history-section">
+
+            <div class="history-header">
+                <h3>Recent Transactions</h3>
+            </div>
+
+            <ul id="transactionList"></ul>
+
+        </div>
+
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
